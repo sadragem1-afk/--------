@@ -1,0 +1,520 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #171614;
+    --surface: #201e1a;
+    --surface-light: #29251f;
+    --cream: #f5f0e7;
+    --muted: #a49a8c;
+    --gold: #c9a878;
+    --border: rgba(216, 198, 165, 0.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    line-height: 1.9;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    min-height: 85px;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    direction: ltr;
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--gold);
+}
+
+.logo-icon {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 35px;
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.navigation a {
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--gold);
+}
+
+.header-label,
+.eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.header-label {
+    direction: ltr;
+}
+
+.hero {
+    min-height: 550px;
+    padding: 90px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    background:
+        radial-gradient(ellipse at 75% 50%, #393025 0%, transparent 45%),
+        var(--bg);
+}
+
+.hero-content {
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.5;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 380px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--gold);
+    color: #171614;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: var(--cream);
+    transform: translateY(-3px);
+}
+
+.hero-button span {
+    font-size: 20px;
+}
+
+.hero-decoration {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid rgba(201, 168, 120, 0.3);
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 260px;
+    height: 260px;
+}
+
+.circle-two {
+    width: 210px;
+    height: 210px;
+}
+
+.hero-letter {
+    color: rgba(201, 168, 120, 0.65);
+    font-family: Georgia, serif;
+    font-size: 190px;
+    font-weight: bold;
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: -15px;
+    direction: ltr;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.menu-section {
+    padding: 100px 10%;
+    background: #1b1916;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.section-heading h2 span {
+    color: var(--gold);
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.menu-category {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border-color 0.3s;
+}
+
+.menu-category:hover {
+    border-color: rgba(201, 168, 120, 0.5);
+}
+
+.category-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.category-number {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.category-heading h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.category-en {
+    margin-right: auto;
+    direction: ltr;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.menu-item p {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.price {
+    white-space: nowrap;
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.price small {
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.special {
+    margin: 80px 10%;
+    padding: 65px 8%;
+    background:
+        linear-gradient(90deg, rgba(23,22,20,0.2), #302820),
+        var(--surface-light);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.special h2 {
+    font-size: 35px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.special-content p {
+    color: var(--muted);
+    max-width: 430px;
+    font-size: 13px;
+}
+
+.special-price {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--gold);
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.special-mark {
+    direction: ltr;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: rgba(201,168,120,0.65);
+    line-height: 1.2;
+}
+
+.special-mark span {
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.about {
+    max-width: 750px;
+    margin: 100px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.about p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2.5;
+}
+
+.footer {
+    padding: 50px 10% 20px;
+    background: #11100e;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    direction: ltr;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer > p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 10px 0 25px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: var(--muted);
+    font-size: 11px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+}
+
+.copyright {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    color: #716b62;
+    font-size: 10px;
+    direction: ltr;
+}
+
+@media (max-width: 850px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .header-label {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 8%;
+    }
+
+    .hero-decoration {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-letter {
+        font-size: 140px;
+    }
+
+    .circle-one {
+        width: 210px;
+        height: 210px;
+    }
+
+    .circle-two {
+        width: 170px;
+        height: 170px;
+    }
+
+    .menu-section {
+        padding: 75px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 65px 8%;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-category {
+        padding: 22px 18px;
+    }
+
+    .category-heading {
+        gap: 8px;
+    }
+
+    .category-heading h3 {
+        font-size: 16px;
+    }
+
+    .category-en {
+        font-size: 8px;
+    }
+
+    .special {
+        margin: 50px 5%;
+        padding: 40px 7%;
+    }
+
+    .special-mark {
+        display: none;
+    }
+
+    .special h2 {
+        font-size: 27px;
+    }
+
+    .about {
+        margin: 70px auto;
+    }
+
+    .about h2 {
+        font-size: 25px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
